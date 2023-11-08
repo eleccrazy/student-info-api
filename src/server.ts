@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import indexRouter from './routes/indexRoute'
 
 const app = express();
 const port = 3000;
@@ -9,9 +10,11 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/api', indexRouter);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send({ message: 'Hello world' });
+  // Redirect all requests from the / endpoint to /api endpoint.
+  res.redirect('/api');
 });
 
 app.listen(port, () => {

@@ -6,8 +6,8 @@ const request = supertest(app);
 
 describe('Test suite for the home route', () => {
   // Test if the home route is redirecting to the /api route
-  it('should redirect to /', async () => {
+  it('should redirect to /api', async () => {
     const response = await request.get('/');
-    expect(response.status).toBe(200);
+    expect(response.status).toBe(302);
   });
 });
