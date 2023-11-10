@@ -13,4 +13,10 @@ describe('Test for index router', () => {
     const response = await request.get('/api/students');
     expect(response.status).toBe(200);
   })
+
+   // Test if the /departments route responds with a 200 ok status code
+   it('the /departments route should respond with a 200 ok status code', async () => {
+    const response = await request.get('/api/departments');
+    expect(response.status).toBe(200);
+  })
 });

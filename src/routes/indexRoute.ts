@@ -18,5 +18,9 @@ indexRouter.get('/', (req: Request, res: Response) => {
     ])
   })
 
+  indexRouter.get('/departments', (req: Request, res: Response) => {
+    res.send({message: 'List of departments'})
+  })
+
   export default indexRouter;
 
