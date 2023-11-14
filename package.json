@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/server.js",
+    "prod": "node dist/server.js",
     "prettier": "prettier --config .prettierrc 'src' --write",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "test": "npm run build && jasmine"
