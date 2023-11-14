@@ -15,6 +15,19 @@ const students = [
   { id: 10, firstName: 'James', lastName: 'Miller', age: 22, gender: 'Male' }
 ];
 
+const departments = [
+  { id: 1, name: 'Computer Science', duration: 4 },
+  { id: 2, name: 'Electrical Engineering', duration: 4 },
+  { id: 3, name: 'Mechanical Engineering', duration: 4 },
+  { id: 4, name: 'Civil Engineering', duration: 4 },
+  { id: 5, name: 'Chemical Engineering', duration: 4 },
+  { id: 6, name: 'Biology', duration: 3 },
+  { id: 7, name: 'Physics', duration: 3 },
+  { id: 8, name: 'Mathematics', duration: 3 },
+  { id: 9, name: 'English Literature', duration: 3 },
+  { id: 10, name: 'History', duration: 3 }
+];
+
 indexRouter.get('/', (req: Request, res: Response) => {
     res.send('Welcome to student information api!');
   });
@@ -25,7 +38,7 @@ indexRouter.get('/', (req: Request, res: Response) => {
   })
 
   indexRouter.get('/departments', (req: Request, res: Response) => {
-    res.send({message: 'List of departments'})
+    res.send(departments)
   })
 
   export default indexRouter;
