@@ -25,4 +25,10 @@ describe('Test for index router', () => {
     const response = await request.get('/api/departments');
     expect(response.status).toBe(200);
   })
+
+  // Test if the /departments route returns an array with length 10.
+  it('the /departments route should return an array with length 10', async () => {
+    const response = await request.get('/api/departments');
+    expect(response.body.length).toBe(10);
+  })
 });
