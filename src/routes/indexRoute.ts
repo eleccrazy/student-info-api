@@ -25,7 +25,7 @@ const departments = [
   { id: 7, name: 'Physics', duration: 3 },
   { id: 8, name: 'Mathematics', duration: 3 },
   { id: 9, name: 'English Literature', duration: 3 },
-  { id: 10, name: 'History', duration: 3 }
+  { id: 10, name: 'History', duration: 3 },
   { id: 11, name: 'Economics', duration: 3}
 ];
 
