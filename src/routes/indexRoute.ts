@@ -41,6 +41,9 @@ indexRouter.get('/', (req: Request, res: Response) => {
   indexRouter.get('/departments', (req: Request, res: Response) => {
     res.send(departments)
   })
-
+  
+  indexRouter.get('/courses', (req: Request, res: Response) => {
+    res.send({message: 'courses route'})
+  })
   export default indexRouter;
 
